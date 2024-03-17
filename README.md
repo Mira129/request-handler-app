@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+## Основное задание: Разработка React-приложения
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Приложение должно состоять из нескольких частей:
 
-## Available Scripts
+Блок с кнопкой и текстовым полем. По нажатию на кнопку выполнить запрос к https://catfact.ninja/fact. Полученный факт нужно записать в текстовое поле и установить курсор после первого слова.
 
-In the project directory, you can run:
+Форма с текстовым полем и кнопкой отправки. Пользователь вводит своё имя в текстовом поле. По истечении 3-х секунд после ввода имени или при отправке формы выполняется запрос к https://api.agify.io/ с введенным именем в параметре *name*. Ответом будет возраст человека, определенный по имени. Этот ответ нужно отобразить под текстовым полем.
 
-### `npm start`
+Особенности:
+<ul>
+    <li>Необходимо предотвращать дублирующие запросы (не отправлять запрос с таким же именем).</li>
+    <li>Предусмотреть отправку следующего запроса до того, как текущий был обработан - прерывать запрос, чей ответ нам уже не нужен (частый кейс при медленном интернете).</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Дополнительные задания:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Использовать при реализации библиотеку VKUI (можно вынести формы в разные страницы, используя компоненты View и Panel).
+2. Реализовать валидацию поля ввода имени (имя может состоять только из букв).
+3. Развернуть данное приложение в виде мини-приложения ВКонтакте. Для этого дополнительно понадобится установить пакет bridge.
+4. Плюсом будет использование следующих библиотек и технологий, так как они активно применяются в проектах команды:
+	* Архитектурная методология Feature-Sliced Design
+    * TanStack Query для работы с запросами
+    * Typescript
+    * React Hook Form + Yup для работы с формами и их валидацией
 
-### `npm test`
+Задание рассчитано на 3-4 часа, поэтому особое внимание следует уделить выполнению основного задания. Рекомендуется выполнять дополнительные задания, если есть опыт работы с данными библиотеками/технологиями, либо остался большой запас по времени.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Результатом выполнения задачи должен стать репозиторий на github/gitlab с инструкцией для запуска - в поле для ответа нужно вставить ссылку с открытым доступом для проверки (+ ссылка на мини-приложение, если оно было развернуто).
 
-### `npm run build`
+## Полезные материалы:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<ul>
+    <li>Документация VKUI https://vkcom.github.io/VKUI/</li>
+    <li>Как создать мини-приложение ВКонтакте https://dev.vk.com/ru/mini-apps/getting-started </li>
+    <li>Документация Feature-Sliced Design https://feature-sliced.design/ru/ </li>
+</ul>

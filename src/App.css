@@ -1,10 +1,26 @@
 .App {
   text-align: center;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.request-input {
+  width: 300 px;
+  height: 20 px;
+}
+
+.request-container {
+  border: 1px solid #1b0c0c;
+  background-color: aliceblue;
+  width: 350px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
